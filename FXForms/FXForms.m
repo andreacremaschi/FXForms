@@ -958,7 +958,7 @@ static void FXFormPreprocessFieldDictionary(NSMutableDictionary *dictionary)
         
         if (self.reverseValueTransformer)
         {
-            value = self.reverseValueTransformer;
+            value = self.reverseValueTransformer(value);
         }
         else if ([value isKindOfClass:[NSString class]])
         {
